@@ -26,6 +26,7 @@
     "@tanstack/react-query": "^5.64.1",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
+    "better-sqlite3": "^11.8.0",
     "cookie": "^1.0.2",
     "dompurify": "^3.2.3",
     "helmet": "^8.0.0",
@@ -37,7 +38,9 @@
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.2",
     "sass": "^1.83.4",
+    "slugify": "^1.6.6",
     "tailwindcss": "^3.4.17",
+    "xss": "^1.0.15",
     "zod": "^3.24.1"
   },
   "devDependencies": {
