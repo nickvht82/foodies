@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import { useFormState } from 'react-dom';
-import { shareMeal } from '@/lib/helpers/actions';
-import ImagePicker from '@/components/features/Meals/image-picker';
-import MealsFormSubmit from '@/components/features/Meals/meals-form-submit';
-import FormField from '@/components/features/Meals/MealForm/FormField/FormField';
-import classes from './MealForm.module.css';
+import { useFormState } from 'react-dom'
+import { shareMeal } from '@/lib/helpers/actions'
+import ImagePicker from '@/components/features/Meals/image-picker'
+import MealsFormSubmit from '@/components/features/Meals/meals-form-submit'
+import FormField from '@/components/features/Meals/MealForm/FormField/FormField'
+import classes from './MealForm.module.css'
 
 export default function MealForm() {
-  const [state, formAction] = useFormState(shareMeal, { message: null });
+  const [state, formAction] = useFormState(shareMeal, { message: null })
 
   return (
     <form className={classes.form} action={formAction}>
@@ -28,13 +28,7 @@ export default function MealForm() {
           required
         />
       </div>
-      <FormField
-        label="Title"
-        type="text"
-        id="title"
-        name="title"
-        required
-      />
+      <FormField label="Title" type="text" id="title" name="title" required />
       <FormField
         label="Short Summary"
         type="text"
@@ -56,5 +50,5 @@ export default function MealForm() {
         <MealsFormSubmit />
       </p>
     </form>
-  );
-} 
+  )
+}

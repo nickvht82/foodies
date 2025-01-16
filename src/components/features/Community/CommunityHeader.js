@@ -1,4 +1,4 @@
-import classes from './CommunityHeader.module.css';
+import classes from './CommunityHeader.module.css'
 
 export default function CommunityHeader() {
   return (
@@ -8,5 +8,5 @@ export default function CommunityHeader() {
       </h1>
       <p>Join our community and share your favorite recipes!</p>
     </header>
-  );
-} 
+  )
+}

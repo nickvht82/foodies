@@ -1,32 +1,32 @@
-import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import Image from 'next/image'
+import { notFound } from 'next/navigation'
 
-import { getMeal } from '@/lib/helpers/meals';
-import classes from './page.module.css';
+import { getMeal } from '@/lib/helpers/meals'
+import classes from './page.module.css'
 
 export async function generateMetadata(props) {
-  const params = await props.params;
-  const meal = getMeal(params.mealSlug);
+  const params = await props.params
+  const meal = getMeal(params.mealSlug)
 
   if (!meal) {
-    notFound();
+    notFound()
   }
 
   return {
     title: meal.title,
     description: meal.summary,
-  };
+  }
 }
 
 export default async function MealDetailsPage(props) {
-  const params = await props.params;
-  const meal = getMeal(params.mealSlug);
+  const params = await props.params
+  const meal = getMeal(params.mealSlug)
 
   if (!meal) {
-    notFound();
+    notFound()
   }
 
-  meal.instructions = meal.instructions.replace(/\n/g, '<br />');
+  meal.instructions = meal.instructions.replace(/\n/g, '<br />')
 
   return (
     <>
@@ -51,5 +51,5 @@ export default async function MealDetailsPage(props) {
         ></p>
       </main>
     </>
-  );
+  )
 }

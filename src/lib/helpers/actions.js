@@ -1,12 +1,12 @@
-'use server';
+'use server'
 
-import { redirect } from 'next/navigation';
+import { redirect } from 'next/navigation'
 
-import { saveMeal } from './meals';
-import { revalidatePath } from 'next/cache';
+import { saveMeal } from './meals'
+import { revalidatePath } from 'next/cache'
 
 function isInvalidText(text) {
-  return !text || text.trim() === '';
+  return !text || text.trim() === ''
 }
 
 export async function shareMeal(prevState, formData) {
@@ -17,7 +17,7 @@ export async function shareMeal(prevState, formData) {
     image: formData.get('image'),
     creator: formData.get('name'),
     creator_email: formData.get('email'),
-  };
+  }
 
   if (
     isInvalidText(meal.title) ||
@@ -31,10 +31,10 @@ export async function shareMeal(prevState, formData) {
   ) {
     return {
       message: 'Invalid input.',
-    };
+    }
   }
 
-  await saveMeal(meal);
-  revalidatePath('/meals');
-  redirect('/meals');
+  await saveMeal(meal)
+  revalidatePath('/meals')
+  redirect('/meals')
 }

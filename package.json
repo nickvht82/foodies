@@ -7,16 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-staged": "lint-staged",
     "prepare": "husky install",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:e2e": "cypress run",
     "test:e2e:dev": "cypress open",
     "format": "prettier --write ."
-  },
-  "lint-staged": {
-    "*.js": "eslint --fix"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -31,7 +27,7 @@
     "dompurify": "^3.2.3",
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
-    "next": "15.1.4",
+    "next": "^15.1.4",
     "next-seo": "^6.6.0",
     "postcss": "^8.5.1",
     "react": "^19.0.0",
@@ -44,6 +40,8 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.26.5",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.26.3",
     "@cypress/code-coverage": "^3.13.10",
@@ -53,7 +51,7 @@
     "@testing-library/user-event": "^14.5.2",
     "babel-jest": "^29.7.0",
     "cypress": "^13.17.0",
-    "eslint": "^9",
+    "eslint": "^9.18.0",
     "eslint-config-next": "15.1.4",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",

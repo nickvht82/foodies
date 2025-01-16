@@ -1,20 +1,20 @@
-import { Suspense } from 'react';
-import Link from 'next/link';
+import { Suspense } from 'react'
+import Link from 'next/link'
 
-import classes from './page.module.css';
-import MealsGrid from '@/components/features/Meals/meals-grid';
-import { getMeals } from '@/lib/helpers/meals';
+import classes from './page.module.css'
+import MealsGrid from '@/components/features/Meals/meals-grid'
+import { getMeals } from '@/lib/helpers/meals'
 
 export const metadata = {
   title: 'All Meals',
   description: 'Browse the delicious meals shared by our vibrant community.',
-};
+}
 
 async function Meals() {
-  console.log('Fetching meals');
-  const meals = await getMeals();
+  console.log('Fetching meals')
+  const meals = await getMeals()
 
-  return <MealsGrid meals={meals} />;
+  return <MealsGrid meals={meals} />
 }
 
 export default function MealsPage() {
@@ -33,10 +33,12 @@ export default function MealsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <Suspense fallback={<p className={classes.loading}>Fetching meals...</p>}>
+        <Suspense
+          fallback={<p className={classes.loading}>Fetching meals...</p>}
+        >
           <Meals />
         </Suspense>
       </main>
     </>
-  );
+  )
 }

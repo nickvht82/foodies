@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import classes from './CommunityPerk.module.css';
+import Image from 'next/image'
+import classes from './CommunityPerk.module.css'
 
 export default function CommunityPerk({ icon, alt, description }) {
   return (
@@ -7,5 +7,5 @@ export default function CommunityPerk({ icon, alt, description }) {
       <Image src={icon} alt={alt} />
       <p>{description}</p>
     </li>
-  );
-} 
+  )
+}

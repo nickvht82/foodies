@@ -1,4 +1,4 @@
-import classes from './main-header-background.module.css';
+import classes from './main-header-background.module.css'
 
 export default function MainHeaderBackground() {
   return (
@@ -22,5 +22,5 @@ export default function MainHeaderBackground() {
         ></path>
       </svg>
     </div>
-  );
+  )
 }

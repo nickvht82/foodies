@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 export default function Error() {
   return (
@@ -6,5 +6,5 @@ export default function Error() {
       <h1>An error occurred!</h1>
       <p>Failed to create meal.</p>
     </main>
-  );
+  )
 }
